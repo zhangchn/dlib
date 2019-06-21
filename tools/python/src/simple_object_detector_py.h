@@ -44,6 +44,7 @@ namespace dlib
         std::vector<unsigned long>& weight_indices
     )
     {
+        py::gil_scoped_release release;
         pyramid_down<2> pyr;
 
         std::vector<rectangle> rectangles;
@@ -124,6 +125,7 @@ namespace dlib
         std::vector<unsigned long>& weight_indices
     )
     {
+        py::gil_scoped_release release;
         pyramid_down<2> pyr;
 
         std::vector<rectangle> rectangles;
